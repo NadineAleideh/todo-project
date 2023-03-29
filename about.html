@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4642e975a5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
     <title>ToDo</title>
 </head>
 <body>
     
     <header>
-        <section>
-            <img src="" alt="ToDo-logo">
+        <section id="logo-name">
+            <img src="./assets/images/todo.png" alt="ToDo-logo" style="width: 50px; height: 50px;">
             <h2>ToDo</h2>
         </section>
 
@@ -26,21 +35,21 @@
          
     </header>
 
-    <br><br><br>
 
-    <main>
-        <section>
-            <img src="" alt="my photo">
-            <h2>Nadine Aleideh</h2>
-            <p>A fresh graduated computer engineer with an experience in web development. <br>Self-motivated, team player with strong organizational and interpersonal skills. Always looking to learn new skills, take on extra responsibilities, and grow professionally.</p>
+    <main id="about">
+        <section id="con">
+            <img src="./assets/images/fdfFF.jpg" alt="my photo" style="width: 150px; height: 150px;">
+              <section id="info">
+                  <h2>Nadine Aleideh</h2>
+                  <p id="descrption">A fresh graduated computer engineer with an experience in web development.Self-motivated, team player with strong organizational and interpersonal skills. Always looking to learn new skills, take on extra responsibilities, and grow professionally.</p>
+              </section>
+
         </section>
 
-        <br><br>
-
-        <section>
+        <section id="form">
             <form>
 
-                <label for="fname">Full</label>
+                <label for="fname">Full Name</label>
                 <input type="text" id="fname" name="fullname" placeholder=" Enter your name..">
             
                 <label for="email">E-mail</label>
@@ -51,13 +60,13 @@
                 <textarea id="Message" name="Message" placeholder="Write something.." >
                 </textarea>
             
-                <input type="submit" value="Submit">
+                <input type="submit" value="Send">
             
               </form>
         </section>
     </main>
 
-    <br><br><br>
+    
 
     <footer>
         <span>&copy; www.ToDo.com copy rights.</span>

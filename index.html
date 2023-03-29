@@ -4,51 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4642e975a5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/index.css">
     <title>ToDo</title>
 </head>
 <body>
     
     <header>
-        <section>
-            <img src="" alt="ToDo-logo">
+        <section id="logo-name">
+            <img src="./assets/images/todo.png" alt="ToDo-logo" style="width: 50px; height: 50px;">
             <h2>ToDo</h2>
         </section>
 
-        <section>
-             <nav>
-                <ul>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    
-                </ul>
-             </nav>
-        </section>
+        <section id="nav">
+            <nav>
+               <ul>
+                   <li><a href="./">Home</a></li>
+                   <li><a href="./about.html">About</a></li>
+                   
+               </ul>
+            </nav>
+       </section>
          
     </header>
 
-    <br><br><br>
+    
 
-    <main>
+    <main id="tasks-sec">
+        <h1>Do IT NOW!</h1>
         <table border="1">
             <thead>
                 <tr>
                    <th>Task</th>
                    <th>Status</th>
+                   <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>Read a book</th>
-                    <th>Done</th>
+                    <td>Read a book</td>
+                    <td>Done</td>
+                    <td>
+                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </td>
                  </tr>
                  <tr>
-                    <th>Go shopping</th>
-                    <th>-</th>
+                    <td>Go shopping</td>
+                    <td>-</td>
+                    <td>
+                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </td>
                  </tr>
                  <tr>
-                    <th>Study Math</th>
-                    <th>-</th>
+                    <td>Study Math</td>
+                    <td>-</td>
+                    <td>
+                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </td>
                  </tr>
+                 
             </tbody>
             <tfoot>
 
@@ -56,8 +80,7 @@
         </table>
     </main>
 
-    <br><br><br>
-
+    
     <footer>
         <span>&copy; www.ToDo.com copy rights.</span>
     </footer>
