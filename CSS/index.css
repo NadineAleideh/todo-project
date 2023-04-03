@@ -1,159 +1,338 @@
-*{
-    /* font-family: 'Open Sans', sans-serif; */
-    font-family: 'Delicious Handrawn', cursive;
-    text-decoration: none;
-}
 
-body{
-    display: flex;
-    flex-direction: column;
-}
+     *{
+        padding:0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: 'Alkatra', cursive;
 
-header{
-    background-color: rgb(26, 25, 25);
-    width: 100%;
-    color: aliceblue;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+     }
+     :root{
+        --darkBlue:#567189;
+        --lightBlue: #7B8FA1;
+        --coffee:#CFB997;
+        --bige:#f7d6a8;
+        font-family: 'Alkatra', cursive;
+     }
+   body{
+    background-color: var(--lightBlue);
+   }
+     /*start header Style*/
+     header{
+        display: flex;
+        justify-content: space-between;
+     }
 
- #logo-name{
-     padding-left: 10px;
-   
- }
+     nav{
+        
+        background-color: var(--darkBlue);
+        height: 70px;
+        width: 100%;
+     }
+     nav img#logo{
+        margin-left: 10px;
+      padding: 0 60px;
+      
+     
+     }
 
-#logo-name img{
-float:left;
-padding-top: 3px;
-}
-#logo-name h2{
-padding-top: 18px;
-padding-left: 64px;
-font-size: 20px;
-font-family: 'Delicious Handrawn', cursive;
-}
+     nav ul{
+        float: right;
+        margin-right: 40px;
+     }
+     nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: -4px 40px;
+        
+     }
+     nav ul li a {
+        color: var(--coffee);
+        font-size: 18px;
+        padding: 8px 20px;;
+        border-radius: 8px ;
+     }
+     a.active,a:hover{
+        background: var(--lightBlue);
+        transition: .5s ;
+     }
+     .checkbtn{
+        font-size: 30px;
+        color: var(--bige);
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+     }
+     #check{
+        display: none;
+     }
+     @media (max-width:952px) {
+        img#logo{
+            width:16px;
+            height: 16px;
+            padding-left: 10px;
+        }
+        nav ul li a {
+            font-size: 16px;
+        }
+     }
 
-nav{
-    float: right;
-    padding-right: 10px;
-}
+     @media (max-width:858px) {
+        .checkbtn{
+            display: block;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: var(--darkBlue);
+            top: 80px;
+            left: -100%;
+            text-align: center; 
+            transition: all .5s;
+        }
+        nav ul li{
+            display: block;
+            margin: 50px 0px;
+            line-height: 30px;
+        }
+        nav ul li a {
+            font-size: 20px;
+        }
+        a:hover,a.active{
+            background: none;
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+     }
+/*end header Style*/
 
-nav ul li {
-    display: inline;
-    padding: 20px;
-    
-}
-nav ul li a{
-    color: aliceblue;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-family: 'Delicious Handrawn', cursive;
-    padding-bottom: 5px;
-}
-
-
+/*start footer Style*/
 footer{
-    background-color: rgb(26, 25, 25);
+    background-color: var(--darkBlue);
     width: 100%;
-    color: aliceblue;
-    padding-top: 15px;
-    padding-bottom:15px;
+    height:auto;
+    color: var(--coffee);
+    padding: 20px 0;
     text-align: center;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
-#tasks-sec{
+/*end footer Style*/
+
+/*start todo list Style home page*/
+#app{
+width: 100%;
+max-width: 540px ;
+background-color: var(--coffee);
+margin: 90px auto 20px;
+padding: 30px 30px 70px ;
+border-radius: 10px;
+
+}
+#app h2{
+    color: var(--darkBlue);
+    margin-bottom: 20px;
+    padding-left: 15%;
+    font-size: 20px;
+    
+   
+}
+#create-task-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #7B8FA1;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+#task-input{
+    flex:1;
+    border:none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    font-family: 'Alkatra', cursive;
+}
+#addBtn{
+border:none;
+outline: none;
+padding:16px 50px;
+background-color: var(--darkBlue);
+color: var(--coffee);
+font-size: 16px;
+font-family: 'Alkatra', cursive;
+border-radius: 40px;
+
+}
+
+#addBtn:hover{
+    color: var(--lightBlue);
+		cursor: pointer;
+        
+}
+
+#list-todo li{
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li::before{
+content:'';
+position: absolute;
+height: 26px;
+width: 26px;
+border-radius: 50%;
+background-image: url(../assets/images/unchecked2.png);
+background-size: cover;
+top:8px;
+left:8px;
+}
+ul li.checked{
+    color:var(--lightBlue);
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(../assets/images/checked.png);
+
+}
+
+.fa-solid{
+    color: var(--darkBlue);
+    padding: 0px 10px;
+}
+/*end todo list Style home page*/
+
+/*start main section about page*/
+
+main#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 533px;
+    background-color:  var(--lightBlue);
+}
+
+
+#con{
+    width: 40%;
+    padding-left: 40px;
+   
+    padding-right:40px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 30px;
-}
-#tasks-sec h1{
-    margin-top: 30px;
-font-size: 50px;
-text-align: center;
-}
-
-table{
-    width: 70%;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 170px;
-    border: 3px solid rgb(26, 25, 25);
-    font-size: 18px;
-}
-
-td,th{
-    border: 3px solid rgb(26, 25, 25);
-    padding: 10px;
-    text-align: center;
-}
-th{
-    background-color: rgb(26, 25, 25);
-    color: aliceblue;
-}
-.fa-pen-to-square{
-    
-    padding-left: 10px;
-}
- .fa-trash{
-    color:rgb(254 197 8 / 78%);
-    padding-right: 10px;
-}
-
- /*about page*/
-
- #con{
-    display: flex;
-    flex-direction: row;
-    width: 55%;
-    margin: auto;
-}
-
- #con img{
-    border-radius: 50%;
-
+    align-items: center;
+   
     
 }
+#descrption{
+    width: 90%;
 
- #about{
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 85px;
 }
-
- #info{
+#form{
+    width: 40%;
     display: flex;
     flex-direction: column;
     padding-left: 30px;
-    font-size: 25px;
+    background-color: var(--darkBlue);
+   border-radius: 5%;
+   
 }
-
- #descrption{
-    padding-top: 5px;
-}
-
- #form{
-    margin-top: 15px;
-}
-
- form{
+form{
     display: flex;
     flex-direction: column;
-    margin-left: 250px;
-    margin-right: 250px;
-    font-size: 20px;
+    width: 90%;
+    margin-top: 30px;
+ 
 }
 
-input{
-        padding: 8px;
-    }
+#personal{
+    width: 300px;
+    height: 250px;
+    border-radius: 50%;
+    
+   
+}
+
+#info{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form input[type="text"],#form input[type="email"],#form textarea{
+    flex:1;
+    border:none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 40px;
+    font-family: 'Alkatra', cursive;
+    background-color: var(--coffee);
+    
+}
+
 input[type="submit"]{
-        background-color:  rgb(26, 25, 25);
-        color: aliceblue;
-        margin-top: 10px;
-        font-size: 18px;
-    }
+    background-color: var(--lightBlue);
+    color: var(--bige);
+    margin-bottom: 30px;
+    font-size: 18px;
+    width: 80%;
+    flex:1;
+    border:none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 40px;
+    font-family: 'Alkatra', cursive;
+}
+
+input[type="submit"]:hover{
+    color:var(--darkBlue);
+}
 label{
-        margin-bottom: 5px;
-        margin-top: 5px;
-        font-size: 18px;
-    }
+    margin-bottom: 5px;
+    padding-top: 20px;
+    font-size: 20px;
+    color: #3a4c5d;
+}
+
+.group-label-input, .group-label-botton{
+    display:flex;
+justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.group-label-botton{
+    
+    width: 83%;
+    margin-left: 16%;
+    margin-top: 40px;
+  
+    
+}
+#info h2, #info p{
+    color:#3a4c5d;
+    font-size: 20px;
+    padding-top:20px;
+    line-height: 25px;
+}
+
+
+/*end main section about page*/

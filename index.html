@@ -11,62 +11,72 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Delicious+Handrawn&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/index.css">
     <title>ToDo</title>
 </head>
 <body>
     
-    <header>
-        <section id="logo-name">
-            <img src="./assets/images/todo.png" alt="ToDo-logo" style="width: 50px; height: 50px;">
-            <h2>ToDo</h2>
-        </section>
-
-        <section id="nav">
-            <nav>
-               <ul>
-                   <li><a href="./">Home</a></li>
-                   <li><a href="./about.html">About</a></li>
-                   
-               </ul>
-            </nav>
-       </section>
-         
+    <header>  
+       <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+            
+            <img id ="logo" src="./assets/images/last-logo.png" alt="ToDo-logo" >
+            
+        <ul>
+            <li><a class="active" href="./">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            
+        </ul>
+       </nav>
     </header>
 
     
-
+<!-- 
     <main id="tasks-sec">
-        <h1>Do IT NOW!</h1>
+        <section class="app">
+          <h1>Do IT NOW!</h1>
+          <section class="create-task-section">
+              <form id="new-todo-form">
+                  <div class="add-task-box">
+                    <input type="text" placeholder="add a task..." name="content" id="content" />
+                    <input type="submit" value="+" />
+                  </div>
+             </form>
+          </section>
+        </section>
         <table border="1">
             <thead>
                 <tr>
-                   <th>Task</th>
                    <th>Status</th>
+                   <th>Task</th>
                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Read a book</td>
                     <td>Done</td>
+                    <td>Read a book</td>
                     <td>
                         <i class="fa-solid fa-trash"></i>
                         <i class="fa-solid fa-pen-to-square"></i>
                     </td>
                  </tr>
                  <tr>
+                    <td>-</td>
                     <td>Go shopping</td>
-                    <td>-</td>
                     <td>
                         <i class="fa-solid fa-trash"></i>
                         <i class="fa-solid fa-pen-to-square"></i>
                     </td>
                  </tr>
                  <tr>
-                    <td>Study Math</td>
                     <td>-</td>
+                    <td>Study Math</td>
                     <td>
                         <i class="fa-solid fa-trash"></i>
                         <i class="fa-solid fa-pen-to-square"></i>
@@ -79,13 +89,46 @@
             </tfoot>
         </table>
     </main>
+-->
+    <main id="app-main-sec">
+      <section id="app">
+        <h2>Don't let anything stops you... do it now!</h2>
+        <div id="create-task-box">
+            <input type="text" id="task-input" placeholder="Add a new task..">
+            <button id="addBtn">Add</button>
+        </div>
+        <ul id="list-todo">
+            <li class="checked">read a book 
+                <div><i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-pen-to-square"></i></div>
+                
+            </li>
+            <li>go shopping
+                <div><i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-pen-to-square"></i></div>
+                
+            </li>
+            <li>study math
+                <div><i class="fa-solid fa-trash"></i>
+                    <i class="fa-solid fa-pen-to-square"></i></div>
+                
+            </li>
 
+        </ul>
+        <!-- <div id="app-footer">
+            <span>You have <span class="pendingTasks">2</span> pending tasks</span>
+            <button class="active">Clear All</button>
+        </div> -->
+        
     
+      </section>
+    </main>
+
     <footer>
-        <span>&copy; www.ToDo.com copy rights.</span>
-    </footer>
+        <div><p>&copy; www.ToDo.com copy rights 2023.</p></div>
+    </footer> 
 
-
+<script src="./JS/app.js"></script>
 
 </body>
 </html>

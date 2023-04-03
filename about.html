@@ -11,6 +11,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;600;700&family=Delicious+Handrawn&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/index.css">
     <title>ToDo</title>
@@ -18,27 +21,24 @@
 <body>
     
     <header>
-        <section id="logo-name">
-            <img src="./assets/images/todo.png" alt="ToDo-logo" style="width: 50px; height: 50px;">
-            <h2>ToDo</h2>
-        </section>
-
-        <section>
-             <nav>
-                <ul>
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    
-                </ul>
-             </nav>
-        </section>
-         
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+            
+            <img id ="logo" src="./assets/images/last-logo.png" alt="ToDo-logo" >
+            
+        <ul>
+            <li><a class="active" href="./">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            
+        </ul>
+       </nav>
     </header>
 
 
     <main id="about">
         <section id="con">
-            <img src="./assets/images/fdfFF.jpg" alt="my photo" style="width: 150px; height: 150px;">
+            <img id="personal" src="./assets/images/personal.jpg" alt="my photo" >
               <section id="info">
                   <h2>Nadine Aleideh</h2>
                   <p id="descrption">A fresh graduated computer engineer with an experience in web development.Self-motivated, team player with strong organizational and interpersonal skills. Always looking to learn new skills, take on extra responsibilities, and grow professionally.</p>
@@ -48,20 +48,22 @@
 
         <section id="form">
             <form>
-
+            <div class= "group-label-input">
                 <label for="fname">Full Name</label>
                 <input type="text" id="fname" name="fullname" placeholder=" Enter your name..">
-            
-                <label for="email">E-mail</label>
+            </div> 
+            <div class= "group-label-input">
+                <label for="email">E-mail       </label>
                 <input type="email" id="email" name="email" placeholder=" Enter your E-mail..">
-                 
-            
+            </div>
+            <div class= "group-label-input">
                 <label for="Message">Message</label>
                 <textarea id="Message" name="Message" placeholder="Write something.." >
                 </textarea>
-            
+            </div>
+            <div class= "group-label-botton">
                 <input type="submit" value="Send">
-            
+            </div>
               </form>
         </section>
     </main>
@@ -69,7 +71,7 @@
     
 
     <footer>
-        <span>&copy; www.ToDo.com copy rights.</span>
+        <span>&copy; www.ToDo.com copy rights 2023.</span>
     </footer>
 
 
