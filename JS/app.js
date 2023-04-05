@@ -2,138 +2,138 @@
 
 let personInfo= [];
 
-let nameInput = prompt("Enter your name please");
-   if(nameInput != ""){
-      personInfo.push(nameInput);
-    let genderInput = prompt ("Enter your gender please, The answer should be either (male or female)");
+let nameAnswer = personName ();
+   if(nameAnswer != ""){
+      personInfo.push(nameAnswer);
 
-         if(genderInput==""){
+  let genderAnswer = personGender ();
+         if(genderAnswer==""){
             personInfo.push("invalid");
          }
          else{
-            personInfo.push(genderInput);
+            personInfo.push(genderAnswer);
          }
             
-            let ageInput = prompt("Enter your age please");
-            if(ageInput==""){
+            let ageAnswer = personAge ();
+            if(ageAnswer==""){
                personInfo.push("invalid");
             }
-            else if(ageInput<=0){
-               while (ageInput<=0)
+            else if(ageAnswer<=0){
+               while (ageAnswer<=0)
             {
                 alert("The age you entered is less than or equal zero.. try again");
-                         ageInput= prompt("Enter your age please");
-                     
+                         ageAnswer = personAge (); 
             }
-            personInfo.push(ageInput);
+            personInfo.push(ageAnswer);
             }
             else{
-               personInfo.push(ageInput);
+               personInfo.push(ageAnswer);
             }
 
-            let ifStudentInput = prompt("Are you a student?, The answer should be either (yes or no)");
-            if(ifStudentInput==""){
+            let ifStudentAnswer = ifStudent();
+            if(ifStudentAnswer==""){
                personInfo.push("invalid");
             }
             else{
-               personInfo.push(ifStudentInput);
+               personInfo.push(ifStudentAnswer);
             }
 
-            let ifEmployeeInput = prompt("Are you an employee?, The answer should be either (yes or no)");
-            if(ifEmployeeInput==""){
+            let ifEmployeeAnswer = ifEmployee ();
+            if(ifEmployeeAnswer==""){
                personInfo.push("invalid");
             }
             else{
-               personInfo.push(ifEmployeeInput);
+               personInfo.push(ifEmployeeAnswer);
             }
 
-            let ifSatisfiedInput = prompt("Are you satisfied from ToDo webapp?, The answer should be either (yes or no)");
-            if(ifSatisfiedInput==""){
+            let ifSatisfiedAnswer = ifSatisfied ();
+            if(ifSatisfiedAnswer==""){
                personInfo.push("invalid");
             }
             else{
-               personInfo.push(ifSatisfiedInput);
+               personInfo.push(ifSatisfiedAnswer);
             }
             
-                    let welcomeConfirm = confirm("Do you want to skip the welcoming message?")
-                    if(welcomeConfirm == false){
-                    if(genderInput == "female"){
-                       alert("Welcome to ToDo webapp Ms "+nameInput);
+                    let welcomeConfirmAnswer = welcomeMessage ();
+                    if(welcomeConfirmAnswer == false){
+                    if(genderAnswer == "female"){
+                       alert("Welcome to ToDo webapp Ms "+nameAnswer);
                     }
-                    else if(genderInput == "male"){
-                        alert("Welcome to ToDo webapp Mr "+nameInput);
+                    else if(genderAnswer == "male"){
+                        alert("Welcome to ToDo webapp Mr "+nameAnswer);
                     }
                     else{
-                       alert("Welcome to ToDo webapp "+nameInput);
+                       alert("Welcome to ToDo webapp "+nameAnswer);
                     }
                   }
 
                   printPersonInfo();
    }
    else{
-    nameInput= prompt("Enter your name please");
-   personInfo.push(nameInput);
-    let genderInput = prompt ("Enter your gender please, The answer should be either (male or female)");
-         if(genderInput==""){
-            personInfo.push("invalid");
+      let nameAnswer = personName ();
+   personInfo.push(nameAnswer);
+   
+   let genderAnswer = personGender ();
+   if(genderAnswer==""){
+      personInfo.push("invalid");
+   }
+   else{
+      personInfo.push(genderAnswer);
+   }
+   
+   
+   let ageAnswer = personAge ();
+   if(ageAnswer==""){
+      personInfo.push("invalid");
+   }
+   else if(ageAnswer<=0){
+      while (ageAnswer<=0)
+   {
+       alert("The age you entered is less than or equal zero.. try again");
+                ageAnswer = personAge (); 
+   }
+   personInfo.push(ageAnswer);
+   }
+   else{
+      personInfo.push(ageAnswer);
+   }
+
+   let ifStudentAnswer = ifStudent();
+   if(ifStudentAnswer==""){
+      personInfo.push("invalid");
+   }
+   else{
+      personInfo.push(ifStudentAnswer);
+   }
+
+   let ifEmployeeAnswer = ifEmployee ();
+   if(ifEmployeeAnswer==""){
+      personInfo.push("invalid");
+   }
+   else{
+      personInfo.push(ifEmployeeAnswer);
+   }
+
+   let ifSatisfiedAnswer = ifSatisfied ();
+   if(ifSatisfiedAnswer==""){
+      personInfo.push("invalid");
+   }
+   else{
+      personInfo.push(ifSatisfiedAnswer);
+   }
+   
+           let welcomeConfirmAnswer = welcomeMessage ();
+           if(welcomeConfirmAnswer == false){
+           if(genderAnswer == "female"){
+              alert("Welcome to ToDo webapp Ms "+nameAnswer);
+           }
+           else if(genderAnswer == "male"){
+               alert("Welcome to ToDo webapp Mr "+nameAnswer);
+           }
+           else{
+              alert("Welcome to ToDo webapp "+nameAnswer);
+           }
          }
-         else{
-            personInfo.push(genderInput);
-         }
-         
-            let ageInput = prompt("Enter your age please");
-            if(ageInput==""){
-               personInfo.push("invalid");
-            }
-            else if(ageInput<=0){
-               while (ageInput<=0)
-            {
-                alert("The age you entered is less than or equal zero.. try again");
-                         ageInput= prompt("Enter your age please");
-                     
-            }
-            personInfo.push(ageInput);
-            }
-            else{
-               personInfo.push(ageInput);
-            }
-
-
-            let ifStudentInput = prompt("Are you a student?, The answer should be either (yes or no)");
-            if(ifStudentInput==""){
-               personInfo.push("invalid");
-            }
-            else{
-               personInfo.push(ifStudentInput);
-            }
-
-            let ifEmployeeInput = prompt("Are you an employee?, The answer should be either (yes or no)");
-            if(ifEmployeeInput==""){
-               personInfo.push("invalid");
-            }
-            else{
-               personInfo.push(ifEmployeeInput);
-            }
-            
-            let ifSatisfiedInput = prompt("Are you satisfied from ToDo webapp?, The answer should be either (yes or no)");
-            if(ifSatisfiedInput==""){
-               personInfo.push("invalid");
-            }
-            else{
-               personInfo.push(ifSatisfiedInput);
-            }
-                    let welcomeConfirm = confirm("Do you want to skip the welcoming message?")
-                    if(welcomeConfirm == false){
-                    if(genderInput == "female"){
-                       alert("Welcome to ToDo webapp Ms "+nameInput);
-                    }
-                    else if(genderInput == "male"){
-                        alert("Welcome to ToDo webapp Mr "+nameInput);
-                    }
-                    else{
-                       alert("Welcome to ToDo webapp "+nameInput);
-                    }
-                  }
                 
                   printPersonInfo();
         
@@ -148,3 +148,40 @@ let nameInput = prompt("Enter your name please");
          }  
 
    }
+
+   function personName (){
+    let nameInput= prompt("Enter your name please");
+   return nameInput;
+   }
+   
+   function personGender (){
+      let genderInput = prompt ("Enter your gender please, The answer should be either (male or female)");
+     return genderInput;
+     }
+
+     function personAge (){
+      let ageInput = prompt ("Enter your age please");
+     return ageInput;
+     }
+
+     function ifStudent (){
+      let ifStudentInput = prompt("Are you a student?, The answer should be either (yes or no)");
+     return ifStudentInput;
+     }
+
+     function ifEmployee (){
+      let ifEmployeeInput = prompt("Are you an employee?, The answer should be either (yes or no)");
+     return ifEmployeeInput;
+     }
+
+     function ifSatisfied (){
+      let ifSatisfiedInput = prompt("Are you satisfied from ToDo webapp?, The answer should be either (yes or no)");
+     return ifSatisfiedInput ;
+     }
+
+     function welcomeMessage (){
+      let welcomeConfirmInput = confirm("Do you want to skip the welcoming message?")
+     return welcomeConfirmInput ;
+     }
+
+     
